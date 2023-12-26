@@ -1,5 +1,5 @@
 <?php
-
+/* TODO iniciar o reanudar una sesion de php */
 session_start();
 
 class Conectar
