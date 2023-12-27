@@ -6,7 +6,7 @@ class Categoria extends Conectar
     /* TODO mostrar todas las categorias */
     $conectar = parent::Conexion();
     parent::set_names();
-    $sql = "SELECT * FROM tm_categoria WHERE est = 1;";
+    $sql = "SELECT * FROM tm_categoria WHERE est = 1";
     $sql = $conectar->prepare($sql);
     $sql->execute();
     return $resultado = $sql->fetchAll();
@@ -16,7 +16,7 @@ class Categoria extends Conectar
   {
     $conectar = parent::Conexion();
     parent::set_names();
-    $sql = " INSERT INTO tm_categoria (cat_id, cat_nom, cat_descrip, est) VALUE (NULL, ?, ?,'1');";
+    $sql = "INSERT INTO tm_categoria (cat_id, cat_nom, cat_descrip, est) VALUE (NULL, ?, ?,'1')";
     $sql = $conectar->prepare($sql);
     $sql->bindValue(1, $cat_nom);
     $sql->bindValue(2, $cat_descrip);
@@ -30,11 +30,11 @@ class Categoria extends Conectar
     parent::set_names();
     $sql = "UPDATE tm_categoria SET
     cat_nom = ?,
-    cat_descrip = ?,
+    cat_descrip = ?
     WHERE
     cat_id = ?";
     $sql = $conectar->prepare($sql);
-    $sql->bindValue(1, $cat_id);
+    $sql->bindValue(1, $cat_nom);
     $sql->bindValue(2, $cat_descrip);
     $sql->bindValue(3, $cat_id);
     $sql->execute();
