@@ -56,6 +56,7 @@ class Contacto extends Conectar
     $sql->bindValue(3, $con_nom);
     $sql->bindValue(4, $con_email);
     $sql->bindValue(5, $con_telf);
+    $sql->bindValue(6, $con_id);
     $sql->execute();
     return $resultado = $sql->fetchAll();
   }
