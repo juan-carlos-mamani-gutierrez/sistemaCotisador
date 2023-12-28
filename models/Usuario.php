@@ -2,6 +2,39 @@
 class Usuario extends Conectar
 {
   /* ------------------------------------- */
+  /* TODO login usuario */
+  /* ------------------------------------- */
+  public function login()
+  {
+    $conectar = parent::Conexion();
+    parent::set_names();
+    if (isset($_POST["enviar"])) {
+      $correo = $_POST["usu_correo"];
+      $password = $_POST["usu_pass"];
+      if (empty($correo) and empty($password)) {
+        header("location:" . Conectar::ruta() . "index.php?m=2");
+        exit();
+      } else {
+        $sql = "SELECT * FROM tm_usuario WHERE usu_correo = ? and usu_pass=?";
+        $sql = $conectar->prepare($sql);
+        $sql->bindValue(1, $correo);
+        $sql->bindValue(2, $password);
+        $sql->execute();
+        $resultado = $sql->fetch();
+        if (is_array($resultado) and count($resultado)) {
+          $_SESSION["usu_id"] = $resultado["usu_id"];
+          $_SESSION["usu_nom"] = $resultado["usu_nom"];
+          $_SESSION["usu_correo"] = $resultado["usu_correo"];
+          header("location:" . Conectar::ruta() . "view/Home/");
+          exit();
+        } else {
+          header("location:" . Conectar::ruta() . "index.php?m=1");
+          exit();
+        }
+      }
+    }
+  }
+  /* ------------------------------------- */
   /* TODO mostrar todas los usuario */
   /* ------------------------------------- */
 

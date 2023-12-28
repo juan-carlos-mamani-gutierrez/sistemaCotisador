@@ -28,6 +28,6 @@ class Conectar
   public  static function ruta()
   {
 
-    return "http://localhost/cotizador";
+    return "http://localhost/cotizador/";
   }
 }

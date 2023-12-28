@@ -50,6 +50,7 @@ switch ($_GET["op"]) {
       echo json_encode($output);
     }
     break;
+
     /* TODO eliminar una usuario */
   case "eliminar":
     $usuario->delete_usuario($_POST["usu_id"]);
