@@ -21,7 +21,7 @@ class Usuario extends Conectar
         $sql->bindValue(2, $password);
         $sql->execute();
         $resultado = $sql->fetch();
-        if (is_array($resultado) and count($resultado)) {
+        if (is_array($resultado) and count($resultado) > 0) {
           $_SESSION["usu_id"] = $resultado["usu_id"];
           $_SESSION["usu_nom"] = $resultado["usu_nom"];
           $_SESSION["usu_correo"] = $resultado["usu_correo"];
