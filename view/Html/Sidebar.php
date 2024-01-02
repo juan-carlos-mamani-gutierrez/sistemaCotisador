@@ -7,7 +7,7 @@
          <a href="javascript:;" data-toggle="nav-profile">
            <div class="cover with-shadow"></div>
            <div class="image">
-             <img src="..\assets\img\user\user-13.jpeg" alt="">
+             <img src="..\..\assets\img\user\user-13.jpeg" alt="">
            </div>
            <div class="info">
              <b class="caret pull-right"></b>
@@ -43,12 +43,12 @@
            <span> Mantenimiento </span>
          </a>
          <ul class="sub-menu">
-           <li><a href="ui_typography.html">Cliente</a></li>
-           <li><a href="ui_typography.html">Contacto</a></li>
-           <li><a href="ui_typography.html">Categoria</a></li>
-           <li><a href="ui_typography.html">Producto</a></li>
-           <li><a href="ui_typography.html">Empresa</a></li>
-           <li><a href="ui_typography.html">Usuario</a></li>
+           <li><a href="../MntCliente/">Cliente</a></li>
+           <li><a href="../MntContacto/">Contacto</a></li>
+           <li><a href="../MntCategoria/">Categoria</a></li>
+           <li><a href="../MntProducto/">Producto</a></li>
+           <li><a href="../MntEmpresa/">Empresa</a></li>
+           <li><a href="../MntUsuario/">Usuario</a></li>
          </ul>
        </li>
 
