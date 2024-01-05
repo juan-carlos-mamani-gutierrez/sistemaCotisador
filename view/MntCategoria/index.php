@@ -48,11 +48,15 @@ if (isset($_SESSION['usu_id'])) {
             </div>
           </div>
           <div class="panel-body">
-            <button type="button" class="btn btn-primary my-2">
+            <button type="button" id="btnnuevo" class="btn btn-primary my-2">
               Nuevo Registro
             </button>
+            <!-- <tr>
+              <td>Default Modal Dialog Box.</td>
+              <td><a href="#modal-dialog" class="btn btn-sm btn-success" data-toggle="modal">Demo</a></td>
+            </tr> -->
 
-            <table id="categoria_data" class="table table-striped table-bordered table-td-valign-middle">
+            <table id="lista_data" class="table table-striped table-bordered table-td-valign-middle">
               <thead>
                 <tr>
                   <th class="text-nowrap">Nombre</th>
@@ -77,7 +81,7 @@ if (isset($_SESSION['usu_id'])) {
       <!-- end scroll to top btn -->
     </div>
     <!-- end page container -->
-
+    <?php require_once('mnt.php'); ?>
     <!-- ================== BEGIN BASE JS ================== -->
     <?php require_once('../Html/Js.php'); ?>
     <script src="categoria.js"></script>
