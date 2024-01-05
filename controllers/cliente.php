@@ -11,7 +11,7 @@ switch ($_GET["op"]) {
     if (empty($_POST["cli_id"])) {
       $cliente->insert_cliente($_POST["cli_nom"], $_POST["cli_ruc"], $_POST["cli_telf"], $_POST["cli_email"]);
     } else {
-      $categoria->update_categoria($_POST["cli_id"], $_POST["cli_nom"], $_POST["cli_ruc"], $_POST["cli_telf"], $_POST["cli_email"]);
+      $cliente->update_cliente($_POST["cli_id"], $_POST["cli_nom"], $_POST["cli_ruc"], $_POST["cli_telf"], $_POST["cli_email"]);
     }
     break;
     /* TODO  accion de listar todas los CLientes */
@@ -24,8 +24,8 @@ switch ($_GET["op"]) {
       $sub_array[] = $row["cli_ruc"];
       $sub_array[] = $row["cli_telf"];
       $sub_array[] = $row["cli_email"];
-      $sub_array[] = '<button type="button" onClick="editar(' . $row["cli_id"] . ')" id="' . $row["cli_id"] . '" ></button>';
-      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["cli_id"] . ')" id="' . $row["cli_id"] . '" ></button>';
+      $sub_array[] = '<button type="button" onClick="editar(' . $row["cli_id"] . ')" id="' . $row["cli_id"] . '" class="btn btn-warning btn-xs">Editar</button>';
+      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["cli_id"] . ')" id="' . $row["cli_id"] . '" class="btn btn-danger btn-xs" >Eliminar</button>';
       $data[] = $sub_array;
     }
 
