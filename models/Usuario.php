@@ -99,7 +99,7 @@ class Usuario extends Conectar
     $sql = "UPDATE tm_usuario SET
     est = 0
     WHERE
-    cli_id = ?";
+    usu_id = ?";
     $sql = $conectar->prepare($sql);
     $sql->bindValue(1, $usu_id);
     $sql->execute();

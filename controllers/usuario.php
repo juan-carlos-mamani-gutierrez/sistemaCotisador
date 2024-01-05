@@ -22,9 +22,9 @@ switch ($_GET["op"]) {
       $sub_array = array();
       $sub_array[] = $row["usu_correo"];
       $sub_array[] = $row["usu_nom"];
-      $sub_array[] = $row["usu_pass"];
-      $sub_array[] = '<button type="button" onClick="editar(' . $row["usu_id"] . ')" id="' . $row["usu_id"] . '" ></button>';
-      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["usu_id"] . ')" id="' . $row["usu_id"] . '" ></button>';
+
+      $sub_array[] = '<button type="button" onClick="editar(' . $row["usu_id"] . ')" id="' . $row["usu_id"] . '" class="btn btn-warning btn-xs">Editar</button>';
+      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["usu_id"] . ')" id="' . $row["usu_id"] . '" class="btn btn-danger btn-xs" >Eliminar</button>';
       $data[] = $sub_array;
     }
 

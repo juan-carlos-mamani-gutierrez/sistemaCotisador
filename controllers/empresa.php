@@ -22,8 +22,8 @@ switch ($_GET["op"]) {
       $sub_array = array();
       $sub_array[] = $row["emp_nom"];
       $sub_array[] = $row["emp_porcen"];
-      $sub_array[] = '<button type="button" onClick="editar(' . $row["emp_id"] . ')" id="' . $row["emp_id"] . '" ></button>';
-      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["emp_id"] . ')" id="' . $row["emp_id"] . '" ></button>';
+      $sub_array[] = '<button type="button" onClick="editar(' . $row["emp_id"] . ')" id="' . $row["emp_id"] . '"class="btn btn-warning btn-xs">Editar</button>';
+      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["emp_id"] . ')" id="' . $row["emp_id"] . '" class="btn btn-danger btn-xs" >Eliminar</button>';
       $data[] = $sub_array;
     }
 
