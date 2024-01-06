@@ -22,8 +22,9 @@
 	              <label for="cat_descrip">Descripcion</label>
 	              <textarea type="text" class="form-control" id="cat_descrip" name="cat_descrip" placeholder="Ingresar la Descripacion" rows="3" required></textarea>
 	            </div>
+	          </fieldset>
 	        </div>
-	        </fieldset>
+
 
 
 	        <div class="modal-footer">

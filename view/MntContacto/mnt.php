@@ -9,28 +9,23 @@
 	      <!-- TODO Formulario -->
 	      <form id="mnt_form" method="POST">
 	        <!-- campo oculto para editar -->
-	        <input type="hidden" id="cli_id" name="cli_id">
+	        <input type="hidden" id="con_id" name="con_id">
 	        <div class="modal-body">
 	          <fieldset>
 	            <!-- TODO Imput de nombre -->
 	            <div class="form-group">
-	              <label for="cli_nom">Nombre</label>
-	              <input type="text" class="form-control" id="cli_nom" name="cli_nom" placeholder="Ingresar el Nombre" required>
+	              <label for="con_nom">Nombre</label>
+	              <input type="text" class="form-control" id="con_nom" name="con_nom" placeholder="Ingresar el Nombre" required>
 	            </div>
-	            <!-- TODO Imput de ruc -->
+	            <!-- TODO Imput de Email -->
 	            <div class="form-group">
-	              <label for="cli_ruc">Ruc</label>
-	              <input type="text" class="form-control" id="cli_ruc" name="cli_ruc" placeholder="Ingresar el Ruc" required>
+	              <label for="con_email">Email</label>
+	              <input type="text" class="form-control" id="con_email" name="con_email" placeholder="Ingresar el Correo Electronico" required>
 	            </div>
 	            <!-- TODO Imput de Telefono -->
 	            <div class="form-group">
-	              <label for="cli_telf">Telefono</label>
-	              <input type="tel" class="form-control" id="cli_telf" name="cli_telf" pattern="[0-9]{8}" placeholder="71234567" required>
-	            </div>
-	            <!-- TODO Imput de correo electronico -->
-	            <div class="form-group">
-	              <label for="cli_email">Correo Electronico</label>
-	              <input type="email" class="form-control" id="cli_email" name="cli_email" placeholder="Ingresar el Correo Electronico" required>
+	              <label for="con_telf">Telefono</label>
+	              <input type="tel" class="form-control" id="con_telf" name="con_telf" pattern="[0-9]{8}" placeholder="71234567" required>
 	            </div>
 	          </fieldset>
 	        </div>

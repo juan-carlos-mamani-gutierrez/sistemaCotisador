@@ -22,8 +22,9 @@
 	              <label for="emp_porcen">Nombre</label>
 	              <input type="number" class="form-control" id="emp_porcen" name="emp_porcen" placeholder="Ingresar el Porcentaje" required>
 	            </div>
+	          </fieldset>
 	        </div>
-	        </fieldset>
+
 
 
 	        <div class="modal-footer">

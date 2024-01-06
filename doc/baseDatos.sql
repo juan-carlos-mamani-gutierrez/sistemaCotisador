@@ -42,3 +42,9 @@ emp_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
 emp_nom VARCHAR(255),
 emp_porcen INT NOT NULL
 );
+
+create table tm_cargo(
+  car_id int primary key auto_increment ,
+  car_nom varchar(50) ,
+  est int
+   )

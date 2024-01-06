@@ -27,8 +27,9 @@
 	              <label for="usu_pass">Password</label>
 	              <input type="password" class="form-control" id="usu_pass" name="usu_pass" placeholder="Ingresar el Password" required>
 	            </div>
+	          </fieldset>
 	        </div>
-	        </fieldset>
+
 
 
 	        <div class=" modal-footer">
