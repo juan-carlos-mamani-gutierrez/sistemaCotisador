@@ -9,7 +9,9 @@ class Producto extends Conectar
   {
     $conectar = parent::Conexion();
     parent::set_names();
-    $sql = "SELECT * FROM tm_producto WHERE est = 1";
+    $sql = "SELECT a.prod_id,b.cat_nom,a.prod_nom,a.prod_descrip,a.prod_precio 
+    FROM tm_producto a INNER JOIN tm_categoria b ON a.cat_id = b.cat_id
+    WHERE a.est = 1";
     $sql = $conectar->prepare($sql);
     $sql->execute();
     return $resultado = $sql->fetchAll();
@@ -47,7 +49,7 @@ class Producto extends Conectar
     prod_descrip = ?,
     prod_precio = ?
     WHERE
-    pro_id = ?";
+    prod_id = ?";
     $sql = $conectar->prepare($sql);
     $sql->bindValue(1, $cat_id);
     $sql->bindValue(2, $prod_nom);

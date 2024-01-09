@@ -20,12 +20,12 @@ switch ($_GET["op"]) {
     $data = array();
     foreach ($datos as $row) {
       $sub_array = array();
-      $sub_array[] = $row["cat_id"];
+      $sub_array[] = $row["cat_nom"];
       $sub_array[] = $row["prod_nom"];
       $sub_array[] = $row["prod_descrip"];
       $sub_array[] = $row["prod_precio"];
-      $sub_array[] = '<button type="button" onClick="editar(' . $row["prod_id"] . ')" id="' . $row["prod_id"] . '" ></button>';
-      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["prod_id"] . ')" id="' . $row["prod_id"] . '" ></button>';
+      $sub_array[] = '<button type="button" onClick="editar(' . $row["prod_id"] . ')" id="' . $row["prod_id"] . '" class="btn btn-warning btn-xs">Editar</button>';
+      $sub_array[] = '<button type="button" onClick="eliminar(' . $row["prod_id"] . ')" id="' . $row["prod_id"] . '" class="btn btn-danger btn-xs" >Eliminar</button>';
       $data[] = $sub_array;
     }
 
@@ -63,7 +63,7 @@ switch ($_GET["op"]) {
       $html = "";
       $html .= "<option selected>Seleccionar</option>";
       foreach ($datos as $row) {
-        $html .= "<option value='" . $row["prod_id"] . "'>" . $row["prod_id"] . "</option>";
+        $html .= "<option value='" . $row["prod_id"] . "'>" . $row["prod_nom"] . "</option>";
       }
       echo $html;
     }
