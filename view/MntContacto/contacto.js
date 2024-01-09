@@ -40,8 +40,8 @@ function editar(con_id) {
     dataType: "json",
     success: function (data) {
       $("#con_id").val(data.con_id);
-      $("#cli_id").val(data.cli_id);
-      $("#car_id").val(data.car_id);
+      $("#cli_id").val(data.cli_id).trigger("change");
+      $("#car_id").val(data.car_id).trigger("change");
       $("#con_nom").val(data.con_nom);
       $("#con_email").val(data.con_email);
       $("#con_telf").val(data.con_telf);
@@ -101,6 +101,19 @@ function eliminar(con_id) {
 
 /* TODO  datatabla lenguaje y datos*/
 $(document).ready(function () {
+
+  $("#cli_id").select2({placeholder: "Seleccionar"});
+  
+  $.post("../../controllers/cliente.php?op=combo",function(data,status){
+    $('#cli_id').html(data);
+  });
+  $("#car_id").select2({placeholder: "Seleccionar"});
+
+  $.post("../../controllers/cargo.php?op=combo",function(data,status){
+    $('#car_id').html(data);
+  });
+
+
   tabla = $("#lista_data")
     .dataTable({
       aProcessing: true,
@@ -154,6 +167,8 @@ $(document).ready(function () {
 });
 $(document).on("click", "#btnnuevo", function () {
   $("#con_id").val("");
+  $("#cli_id").val([]).trigger("change");
+  $("#car_id").val([]).trigger("change");
   $("#mnt_form")[0].reset();
   $("#mdltitulo").html("Nuevo Registro");
   $("#mdlmnt").modal("show");

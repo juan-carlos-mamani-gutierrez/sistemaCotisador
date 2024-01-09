@@ -17,3 +17,5 @@
 <script src="..\..\assets\js\demo\table-manage-buttons.demo.js"></script>
 <!--TODO alertas -->
 <script src="..\..\assets\plugins\sweetalert\dist\sweetalert.min.js"></script>
+<!-- TODO select 2  -->
+<script src="..\..\assets\plugins\select2\dist\js\select2.min.js"></script>

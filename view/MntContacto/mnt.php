@@ -12,6 +12,18 @@
 	        <input type="hidden" id="con_id" name="con_id">
 	        <div class="modal-body">
 	          <fieldset>
+				<!-- TODO select id -->
+				<div class="form-group">
+				<label for="cli_id">Cliente</label>
+				<select id="cli_id" name="cli_id" class="default-select2 form-control">
+			    </select>
+				</div>
+				<!-- TODO select id -->
+				<div class="form-group">
+				<label for="car_id">Cargo</label>
+				<select id="car_id" name="car_id" class="default-select2 form-control">
+			    </select>
+				</div>
 	            <!-- TODO Imput de nombre -->
 	            <div class="form-group">
 	              <label for="con_nom">Nombre</label>
@@ -20,12 +32,12 @@
 	            <!-- TODO Imput de Email -->
 	            <div class="form-group">
 	              <label for="con_email">Email</label>
-	              <input type="text" class="form-control" id="con_email" name="con_email" placeholder="Ingresar el Correo Electronico" required>
+	              <input type="email" class="form-control" id="con_email" name="con_email" placeholder="Ingresar el Correo Electronico" required>
 	            </div>
 	            <!-- TODO Imput de Telefono -->
 	            <div class="form-group">
 	              <label for="con_telf">Telefono</label>
-	              <input type="tel" class="form-control" id="con_telf" name="con_telf" pattern="[0-9]{8}" placeholder="71234567" required>
+	              <input type="tel" class="form-control" id="con_telf" name="con_telf" pattern="[0-9]{8}" placeholder="ej .71234567" required>
 	            </div>
 	          </fieldset>
 	        </div>

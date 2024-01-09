@@ -9,7 +9,10 @@ class Contacto extends Conectar
   {
     $conectar = parent::Conexion();
     parent::set_names();
-    $sql = "SELECT * FROM tm_contacto WHERE est = 1";
+    $sql = "SELECT a.con_id,c.cli_nom,b.car_nom,a.con_nom,a.con_email,a.con_telf
+    FROM tm_contacto a INNER JOIN tm_cargo b ON b.car_id = a.car_id 
+    INNER JOIN tm_cliente c ON a.cli_id=c.cli_id 
+    WHERE a.est = 1";
     $sql = $conectar->prepare($sql);
     $sql->execute();
     return $resultado = $sql->fetchAll();

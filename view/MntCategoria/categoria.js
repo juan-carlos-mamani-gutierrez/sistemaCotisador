@@ -98,6 +98,7 @@ function eliminar(cat_id) {
 
 /* TODO  datatabla lenguaje y datos*/
 $(document).ready(function () {
+  
   tabla = $("#lista_data")
     .dataTable({
       aProcessing: true,

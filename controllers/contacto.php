@@ -20,8 +20,8 @@ switch ($_GET["op"]) {
     $data = array();
     foreach ($datos as $row) {
       $sub_array = array();
-      $sub_array[] = $row["cli_id"];
-      $sub_array[] = $row["car_id"];
+      $sub_array[] = $row["cli_nom"];
+      $sub_array[] = $row["car_nom"];
       $sub_array[] = $row["con_nom"];
       $sub_array[] = $row["con_email"];
       $sub_array[] = $row["con_telf"];

@@ -11,7 +11,7 @@ cli_email VARCHAR(255),
 est int
 );
 
-tm_categoriaCREATE TABLE tm_categoria(
+CREATE TABLE tm_categoria(
 cat_id INT PRIMARY KEY AUTO_INCREMENT,
 cat_nom VARCHAR(255),
 cat_descrip VARCHAR(255),
@@ -48,3 +48,15 @@ create table tm_cargo(
   car_nom varchar(50) ,
   est int
    )
+
+create table tm_usuario(
+usu_id INT primary key auto_increment,
+usu_correo varchar(255),
+usu_nom varchar(255),
+usu_pass varchar(255),
+est int 
+)
+
+INSERT INTO tm_usuario (usu_id, usu_correo, usu_nom, usu_pass, est)
+VALUES(NULL,'admin@gmail.com','admin','123456', 1);
+select * from tm_usuario;

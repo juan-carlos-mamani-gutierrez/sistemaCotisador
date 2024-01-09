@@ -63,7 +63,7 @@ switch ($_GET["op"]) {
       $html = "";
       $html .= "<option selected>Seleccionar</option>";
       foreach ($datos as $row) {
-        $html .= "<option value='" . $row["cli_id"] . "'>" . $row["cli_id"] . "</option>";
+        $html .= "<option value='" . $row["cli_id"] . "'>" . $row["cli_nom"] . "</option>";
       }
       echo $html;
     }
