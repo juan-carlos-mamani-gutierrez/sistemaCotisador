@@ -28,7 +28,7 @@
      <ul class="nav">
        <li class="nav-header">Menu</li>
        <li class="has-sub">
-         <a href="javascript:;">
+         <a href="../Home/">
            <i class="fa fa-th-large"></i>
            <span>Dashboard</span>
          </a>
@@ -59,7 +59,7 @@
            <span> Cotizacion </span>
          </a>
          <ul class="sub-menu">
-           <li><a href="ui_typography.html">Nueva Cotizacion </a></li>
+           <li><a href="../NuevaCotizacion/">Nueva Cotizacion </a></li>
            <li><a href="ui_typography.html">Listado Cotizacion </a></li>
          </ul>
        </li>

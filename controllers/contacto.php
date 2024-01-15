@@ -59,13 +59,13 @@ switch ($_GET["op"]) {
     $contacto->delete_contacto($_POST["con_id"]);
     break;
     /* TODO accion para mostrar option */
-  case "combo":
-    $datos = $contacto->get_contacto();
+  case "combo_x_cliente":
+    $datos = $contacto->get_contacto_x_cliente_id($_POST["cli_id"]);
     if (is_array($datos) == true and count($datos) > 0) {
       $html = "";
       $html .= "<option selected>Seleccionar</option>";
       foreach ($datos as $row) {
-        $html .= "<option value='" . $row["con_id"] . "'>" . $row["con_id"] . "</option>";
+        $html .= "<option value='" . $row["con_id"] . "'>" . $row["con_nom"] . "</option>";
       }
       echo $html;
     }

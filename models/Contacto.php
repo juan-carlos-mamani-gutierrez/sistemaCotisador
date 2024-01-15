@@ -96,4 +96,18 @@ class Contacto extends Conectar
     $sql->execute();
     return $resultado = $sql->fetchAll();
   }
+  /* ------------------------------------- */
+  /* TODO mostrar un contacto en especifico */
+  /* ------------------------------------- */
+
+  public function get_contacto_x_cliente_id($cli_id)
+  {
+    $conectar = parent::Conexion();
+    parent::set_names();
+    $sql = "SELECT * FROM tm_contacto WHERE cli_id = ? AND est = 1";
+    $sql = $conectar->prepare($sql);
+    $sql->bindValue(1, $cli_id);
+    $sql->execute();
+    return $resultado = $sql->fetchAll();
+  }
 }

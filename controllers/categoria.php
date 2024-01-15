@@ -9,9 +9,16 @@ switch ($_GET["op"]) {
     /* TODO accion de insertar e editar */
   case "guardaryeditar":
     if (empty($_POST["cat_id"])) {
-      $categoria->insert_categoria($_POST["cat_nom"], $_POST["cat_descrip"]);
+      $datos = $categoria->get_categoria_x_nombre($_POST["cat_nom"]);
+      if(is_array($datos) == true and count($datos)>0){
+         echo 'error';
+      }else{
+        $categoria->insert_categoria($_POST["cat_nom"], $_POST["cat_descrip"]);
+         echo 'ok';
+      }   
     } else {
       $categoria->update_categoria($_POST["cat_id"], $_POST["cat_nom"], $_POST["cat_descrip"]);
+      echo 'ok';
     }
     break;
     /* TODO  accion de listar todas las categorias */

@@ -15,17 +15,29 @@ function guardaryeditar(e) {
     contentType: false,
     processData: false,
     success: function (datos) {
-      $("#mnt_form")[0].reset();
-      $("#mdlmnt").modal("hide");
-      $("#lista_data").DataTable().ajax.reload();
-
-      swal({
-        position: "center",
-        title: "Cotizador!",
-        text: "Registro Guardado",
-        icon: "success",
-        confirmButtonClass: "btn-success",
-      });
+      console.log(datos);
+      if(datos == 'ok'){
+        $("#mnt_form")[0].reset();
+        $("#mdlmnt").modal("hide");
+        $("#lista_data").DataTable().ajax.reload();
+  
+        swal({
+          position: "center",
+          title: "Cotizador!",
+          text: "Registro Guardado",
+          icon: "success",
+          confirmButtonClass: "btn-success",
+        });
+      }else if(datos == 'error'){
+        swal({
+          position: "center",
+          title: "Cotizador!",
+          text: "Dato duplicado ",
+          icon: "error",
+          confirmButtonClass: "btn-success",
+        });
+      }
+      
     },
   });
 }

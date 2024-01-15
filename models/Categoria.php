@@ -65,4 +65,15 @@ class Categoria extends Conectar
     $sql->execute();
     return $resultado = $sql->fetchAll();
   }
+  /* TODO obtener el nombre */
+  public function get_categoria_x_nombre($cat_nom)
+  {
+    $conectar = parent::Conexion();
+    parent::set_names();
+    $sql = "SELECT * FROM tm_categoria WHERE cat_nom = ? AND est = 1";
+    $sql = $conectar->prepare($sql);
+    $sql->bindValue(1, $cat_nom);
+    $sql->execute();
+    return $resultado = $sql->fetchAll();
+  }
 }
